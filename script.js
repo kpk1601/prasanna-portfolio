@@ -90,14 +90,14 @@ const observer = new IntersectionObserver((entries) => {
 revealElements.forEach((element) => {
     observer.observe(element);
 });
-// HAMBURGER MENU FUNCTIONALITY
+// HAMBURGER MENU - FIXED
 
-const menuToggle = document.querySelector("#menu-toggle");
-const navLinks = document.querySelector("#nav-menu");
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-menu");
 
 if (menuToggle && navLinks) {
 
-    menuToggle.addEventListener("click", () => {
+    menuToggle.addEventListener("click", function () {
 
         const isOpen = navLinks.classList.toggle("active");
 
@@ -107,9 +107,9 @@ if (menuToggle && navLinks) {
 
     });
 
-    navLinks.querySelectorAll("a").forEach(link => {
+    navLinks.querySelectorAll("a").forEach(function (link) {
 
-        link.addEventListener("click", () => {
+        link.addEventListener("click", function () {
 
             navLinks.classList.remove("active");
 
@@ -122,40 +122,3 @@ if (menuToggle && navLinks) {
     });
 
 }
-// HAMBURGER MENU - FINAL VERSION
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const toggleButton = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-menu");
-
-    if (!toggleButton || !navLinks) {
-        console.error("Hamburger menu elements not found!");
-        return;
-    }
-
-    toggleButton.addEventListener("click", function () {
-
-        const isOpen = navLinks.classList.toggle("active");
-
-        toggleButton.textContent = isOpen ? "✕" : "☰";
-
-        toggleButton.setAttribute("aria-expanded", isOpen);
-
-    });
-
-    navLinks.querySelectorAll("a").forEach(function (link) {
-
-        link.addEventListener("click", function () {
-
-            navLinks.classList.remove("active");
-
-            toggleButton.textContent = "☰";
-
-            toggleButton.setAttribute("aria-expanded", "false");
-
-        });
-
-    });
-
-});
