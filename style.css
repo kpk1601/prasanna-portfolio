@@ -696,14 +696,14 @@ footer {
     }
 
 }
-/* HAMBURGER MENU */
+/* HAMBURGER MENU - FIXED */
 
 .menu-toggle {
     display: none;
     background: transparent;
     border: 1px solid #22d3ee;
     color: white;
-    font-size: 24px;
+    font-size: 25px;
     padding: 6px 12px;
     border-radius: 8px;
     cursor: pointer;
@@ -712,12 +712,11 @@ footer {
 @media (max-width: 600px) {
 
     .navbar {
-        position: relative;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        flex-wrap: wrap;
+        position: relative;
     }
 
     .menu-toggle {
@@ -730,13 +729,13 @@ footer {
         top: 100%;
         left: 0;
         width: 100%;
-        box-sizing: border-box;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-        padding: 8px 0;
         background: #080b1a;
-        z-index: 1000;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 10px 0;
+        gap: 0;
+        z-index: 1001;
     }
 
     .nav-links.active {
@@ -746,6 +745,7 @@ footer {
     .nav-links li {
         width: 100%;
         text-align: center;
+        list-style: none;
     }
 
     .nav-links a {
@@ -753,60 +753,20 @@ footer {
         padding: 12px;
         font-size: 14px;
     }
-}
-/* HAMBURGER MENU */
 
-.menu-toggle {
-    display: none;
-    background: transparent;
-    border: 1px solid #22d3ee;
-    color: white;
-    font-size: 25px;
-    padding: 5px 12px;
-    border-radius: 8px;
-    cursor: pointer;
+}
+/* RESUME DOWNLOAD BUTTON */
+
+.resume-btn {
+    margin-left: 12px;
+    margin-top: 12px;
 }
 
 @media (max-width: 600px) {
 
-    .navbar {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
+    .resume-btn {
+        display: table;
+        margin: 15px auto 0;
     }
 
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #080b1a;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 0;
-        z-index: 1000;
-    }
-    .nav-links {
-    display: none;
-}
-
-.nav-links.active {
-    display: flex !important;
-}
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        list-style: none;
-        padding: 10px;
-    }
 }
