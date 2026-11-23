@@ -770,3 +770,254 @@ footer {
     }
 
 }
+/* =================================
+   VIDEO EDITING EXPERIENCE SECTION
+================================= */
+
+.video-editor-section {
+    padding: 100px 10%;
+    background: #0b1020;
+}
+
+.ve-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.ve-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.ve-label {
+    color: #22d3ee;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.ve-heading h2 {
+    font-size: clamp(35px, 6vw, 55px);
+    margin: 15px 0;
+    background: none;
+    color: white;
+    -webkit-text-fill-color: white;
+}
+
+.ve-heading h2 span {
+    background: linear-gradient(90deg, #a855f7, #22d3ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ve-heading p {
+    color: #b8c0d9;
+    font-size: 16px;
+}
+
+.ve-card {
+    padding: clamp(20px, 5vw, 45px);
+    border-radius: 20px;
+    background: linear-gradient(145deg, #151b30, #0d1224);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    color: white;
+    transition: 0.3s;
+}
+
+.ve-card:hover {
+    border-color: #22d3ee;
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.12);
+}
+
+.ve-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.ve-icon {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #a855f7, #22d3ee);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    color: white;
+}
+
+.ve-badge {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #22d3ee;
+    font-weight: 700;
+}
+
+.ve-top h3 {
+    font-size: 25px;
+    margin: 8px 0;
+}
+
+.ve-top h4 {
+    color: #b8c0d9;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.ve-description {
+    color: #b8c0d9;
+    line-height: 1.8;
+    font-size: 15px;
+    margin: 25px 0;
+}
+
+.ve-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.ve-detail {
+    background: #202443;
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.ve-detail span {
+    display: block;
+    font-size: 10px;
+    color: #22d3ee;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.ve-detail strong {
+    font-size: 14px;
+    color: white;
+}
+
+.ve-skills h4,
+.ve-software h4 {
+    font-size: 18px;
+    margin: 30px 0 20px;
+    color: #22d3ee;
+}
+
+.ve-skill {
+    margin-bottom: 20px;
+}
+
+.ve-skill-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #e5e7eb;
+}
+
+.ve-skill-info span:last-child {
+    color: #22d3ee;
+}
+
+.ve-bar {
+    height: 7px;
+    background: #303653;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.ve-bar div {
+    height: 100%;
+    background: linear-gradient(90deg, #a855f7, #22d3ee);
+    border-radius: 20px;
+    animation: ve-grow 1.2s ease forwards;
+}
+
+@keyframes ve-grow {
+    from {
+        width: 0;
+    }
+}
+
+.ve-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.ve-tags span {
+    padding: 10px 20px;
+    background: rgba(168, 85, 247, 0.12);
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    border-radius: 50px;
+    color: #22d3ee;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.ve-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #303653;
+}
+
+.ve-footer span {
+    font-size: 12px;
+    color: #b8c0d9;
+    background: #202443;
+    padding: 10px 14px;
+    border-radius: 8px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    .video-editor-section {
+        padding: 70px 6%;
+    }
+
+    .ve-top {
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .ve-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 13px;
+        font-size: 20px;
+    }
+
+    .ve-top h3 {
+        font-size: 19px;
+    }
+
+    .ve-details {
+        grid-template-columns: 1fr;
+    }
+
+    .ve-footer {
+        flex-direction: column;
+    }
+
+    .ve-skill-info {
+        font-size: 12px;
+    }
+
+}
+/* FIX NAVIGATION OVERLAPPING */
+
+#video-editing {
+    scroll-margin-top: 110px;
+}
